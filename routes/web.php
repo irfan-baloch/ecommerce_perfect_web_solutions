@@ -20,3 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['as'=>'admin.'], function(){
+	Route::get('/admin', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('dashboard');
+});
