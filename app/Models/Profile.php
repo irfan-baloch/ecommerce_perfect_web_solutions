@@ -10,5 +10,6 @@ class Profile extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $guarded = [];
     protected $dates = ['deleted_at'];
 }

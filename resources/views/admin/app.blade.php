@@ -22,6 +22,7 @@
 <body>
     <div id="app">
         <main >
+            @include('admin/partials/navbar')
             @yield('content')
         </main>
     </div>
